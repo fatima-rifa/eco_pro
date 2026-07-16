@@ -11,6 +11,11 @@ from django.shortcuts import get_object_or_404
 
 
 
+def home_page(request):
+    return render(request,"home_page.html")
+
+
+
 
 def registration(request):
     if request.method == "POST":
@@ -61,7 +66,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login')
+    return redirect('home_page')
 
 
 

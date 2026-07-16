@@ -22,9 +22,10 @@ from shop import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.registration, name='registration'),
-    path('home/', views.home, name='home'),
+    path('', views.home_page, name='home_page'),
+    path('register/', views.registration, name='registration'),
     path('login/', views.login_user, name='login'),
+    path('home/', views.home, name='home'),
     path('logout/', views.logout_user, name='logout'),
     path('add_to_cart/<int:id>/', views.add_to_cart, name='add_to_cart'),
     path('cart/', views.cart, name='cart'),
